@@ -84,7 +84,7 @@ cars.push({ brand: "", color: "", licencePlate: "", model: "", trims: "" });
 console.log(cars);
 
 cars.forEach((car) => {
-  delete car["trims"];
+  car["trims"].pop();
 });
 
 console.log(cars);
@@ -92,13 +92,22 @@ console.log(cars);
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
+/* console.log("ESERCIZIO 7");
+
 const justTrims = [];
+
+for (let i = 0; i < cars.length; i++) {
+  justTrims.push(cars[trims]);
+}
+
+console.log(justTrims); */
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
-
+/* for (let i = 0; i < cars.length; i++) {}
+ */
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
