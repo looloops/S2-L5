@@ -7,9 +7,9 @@
     color: white;
 }
 
-.text .imgBox {
-    width: 25%;
-    display: inline-block;
+.imgBox {
+    max-width: 25%;
+    height: 100%;
 
 }
 
@@ -22,8 +22,6 @@
     width: 89px;
     padding-block: 8px;
 }
-
-
 
 .margin-bottom {
     margin-block-end: 30px;
@@ -68,12 +66,14 @@ main {
 .images-container {
     width: 100%;
     background: white;
+    height: 400px;
 }
 
 .imgBox {
     width: 25%;
     max-width: 25%;
-    height: 400px;
+    height: 100%;
+    max-height: 100%;
 }
 
 .imgBox img {
