@@ -69,7 +69,7 @@ const cars = [
 ];
 
 cars.forEach((car) => {
-  car["licensePlate"] = "HY5656";
+  car["licensePlate"] = "HY5656" + i + "WE";
 });
 
 console.log(cars);
@@ -92,15 +92,15 @@ console.log(cars);
 /* ESERCIZIO 7
     Scrivi del codice per salvare il primo elemento della proprietà "trims" di ogni auto nel nuovo array "justTrims", sotto definito.
 */
-/* console.log("ESERCIZIO 7");
+console.log("ESERCIZIO 7");
 
 const justTrims = [];
 
 for (let i = 0; i < cars.length; i++) {
-  justTrims.push(cars[trims]);
+  justTrims.push(cars.trims[0]);
 }
 
-console.log(justTrims); */
+console.log(justTrims);
 
 /* ESERCIZIO 8
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
