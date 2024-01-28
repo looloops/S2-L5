@@ -68,7 +68,7 @@ const cars = [
   },
 ];
 
-cars.forEach((car) => {
+cars.forEach((car, i) => {
   car["licensePlate"] = "HY5656" + i + "WE";
 });
 
@@ -80,7 +80,7 @@ console.log(cars);
 */
 
 console.log("ESERCIZIO 6");
-cars.push({ brand: "", color: "", licencePlate: "", model: "", trims: "" });
+cars.push({ brand: "", color: "", licencePlate: "", model: "", trims: ["", ""] });
 console.log(cars);
 
 cars.forEach((car) => {
@@ -97,7 +97,7 @@ console.log("ESERCIZIO 7");
 const justTrims = [];
 
 for (let i = 0; i < cars.length; i++) {
-  justTrims.push(cars.trims[0]);
+  justTrims.push(cars[i].trims[0]);
 }
 
 console.log(justTrims);
@@ -106,16 +106,77 @@ console.log(justTrims);
     Cicla l'array "cars" e costruisci un if/else statament per mostrare due diversi messaggi in console. Se la prima lettera della proprietà
     "color" ha valore "b", mostra in console "Fizz". Altrimenti, mostra in console "Buzz".
 */
-/* for (let i = 0; i < cars.length; i++) {}
- */
+console.log("ESERCIZIO 8");
+
+for (let i = 0; i < cars.length; i++) {
+  if (cars[i].color.charAt(0) === "b") {
+    console.log("Fizz");
+  } else {
+    console.log("Buzz");
+  }
+}
+
 /* ESERCIZIO 9
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
 const numericArray = [6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105];
+let i = 0;
+
+while (numericArray[i] !== 32 && i < numericArray.length) {
+  console.log(numericArray[i]);
+  i++;
+}
+
+if (i !== 0) {
+  console.log(numericArray[i]);
+}
 
 /* ESERCIZIO 10
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ["g", "n", "u", "z", "d"];
+const charactersArray = ["g", "n", "u", "z", "d", "x"];
+const alfabetoIta = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "z",
+];
+
+let charactersArrayAlphabetPositions = [];
+
+for (let i = 0; i < charactersArray.length; i++) {
+  var char = charactersArray[i];
+  var indexOfChar = alfabetoIta.indexOf(char);
+  switch (true) {
+    case indexOfChar > -1:
+      charactersArrayAlphabetPositions.push(indexOfChar + 1);
+      break;
+    default:
+      charactersArrayAlphabetPositions.push("Not found");
+      break;
+  }
+}
+
+console.log("ESERCIZIO 10");
+console.log(charactersArray);
+console.log("--->");
+console.log(charactersArrayAlphabetPositions);
